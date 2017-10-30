@@ -1,0 +1,67 @@
+// _c-title.scss
+
+h1 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 62px;
+  color: color(foreground, invert);
+
+  @include respond-to('large') {
+    font-size: 90px;
+    line-height: 92px;
+  }
+}
+
+h3 {
+  margin: 10px 0 25px 0;
+  font-weight: 100;
+  font-size: 26px;
+  color: color(foreground, invert);
+
+  @include respond-to('large') {
+    margin: 0 0 25px 0;
+  }
+}
+
+.title {
+  position: relative;
+
+  .index {
+    line-height: 190px;
+    font-size: 290px;
+    font-weight: 700;
+    color: rgba(color('secondary', 'light'),0.2);
+  }
+  h2 {
+    position: absolute;
+    font-family: font('secondary');
+    font-weight: 700;
+    font-size: 23px;
+    color: color('foreground', 'invert');
+    text-transform: uppercase;
+    bottom: 10px;
+    left: 20px;
+  }
+}
+
+.section {
+  &--about,
+  &--spec {
+    p, li {
+      color: color('foreground', 'invert');
+      font-weight: 100;
+      font-size: 16px;
+      line-height: 22px;
+      padding-left: 20px;
+    }
+
+    ul {
+      li {
+        color: color('foreground', 'invert');
+        padding-left: 5px;
+        margin-bottom: 14px;
+      }
+    }
+  }
+}

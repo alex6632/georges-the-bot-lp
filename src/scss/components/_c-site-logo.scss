@@ -1,0 +1,41 @@
+// _c-site-logo.scss
+
+.site-logo {
+  padding: 10px 0 0 20px;
+
+  &__link {
+    display: block;
+    height: 50px;
+    float: left;
+    margin-bottom: 10px;
+
+    @include respond-to('large') {
+      margin-bottom: 0;
+    }
+
+    .site-header & {
+      color: color('gray');
+    }
+
+    .site-footer & {
+      color: color('gray', 'invert');
+      background: color('gray');
+    }
+
+    img {
+      max-height: 100%;
+
+      &.show {
+        display: none;
+      }
+
+      &.invert {
+        display: none;
+
+        &.show {
+          display: block;
+        }
+      }
+    }
+  }
+}

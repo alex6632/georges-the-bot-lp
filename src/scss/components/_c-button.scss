@@ -1,0 +1,44 @@
+// _c-button.scss
+
+.btn {
+  @extend button;
+  display: inline-block;
+  font-family: font('secondary');
+  font-size: 13px;
+  font-weight: 700;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: color('primary');
+  background: color('background');
+  border: solid 2px color('background');
+  appearance: none !important;
+  @include transition();
+
+  &:focus,
+  &:hover {
+    background: transparent;
+    color: color('background');
+    @include transition();
+  }
+}
+
+/// Create themed btn version based on $colors variable map
+/// @variable {String} $color-name - Color's name
+/// @variable {List} $color-variant - Color's themed map
+/// @return {Mixed} .btn--color-name
+/// @require $colors
+@each $color-name, $color-variants in $colors {
+  .btn--#{$color-name} {
+    color: color($color-name, 'invert');
+    background: color($color-name);
+
+    @each $variant-name, $color-variant in $color-variants {
+      &-#{$variant-name} {
+        color: color($color-name, 'invert');
+        background: color($color-name, $variant-name);
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+// _fonts.scss
+
+@font-face {
+  font-family: 'Open-sans';
+  src: url('../fonts/OpenSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open-sans';
+  src: url('../fonts/OpenSans-Light.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kayak-sans';
+  src: url('../fonts/Kayak_Sans_Light_italic.otf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Kayak-sans';
+  src: url('../fonts/Kayak_Sans_Light.otf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kayak-sans';
+  src: url('../fonts/Kayak_Sans_Regular.otf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kayak-sans';
+  src: url('../fonts/Kayak_Sans_Bold.otf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}

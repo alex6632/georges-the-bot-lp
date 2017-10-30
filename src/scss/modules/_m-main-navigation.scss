@@ -1,0 +1,161 @@
+// _m-main-navigation.scss
+
+.main-navigation {
+
+  &__trigger {
+    position: absolute;
+    padding: 0px 0px 0 0;
+    right: 0;
+    top: 0;
+    height: 75px;
+    width: 70px;
+
+    @include respond-to('large') {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: none;
+    padding: 0;
+    list-style: none;
+    margin: 65px 0 0 0;
+    background-color: color('background');
+
+    @include respond-to('large') {
+      margin: 0;
+      display: block;
+      padding: 4px 0 0 0;
+      line-height: 20px;
+      background-color: transparent;
+    }
+
+    .main-navigation.is-open & {
+      display: block;
+    }
+  }
+
+  &__sublist {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    @include respond-to('large') {
+      position: absolute;
+      display: none;
+    }
+
+    .main-navigation__item.is-open & {
+      display: block;
+    }
+
+    .main-navigation__item:hover & {
+      @include respond-to('large') {
+        display: block;
+      }
+    }
+  }
+
+  &__item {
+    @include respond-to('large') {
+      display: inline-block;
+    }
+  }
+
+  &__subitem {
+
+  }
+
+  &__link {
+    display: block;
+    color: color('primary');
+    text-decoration: none;
+    font-weight: 100;
+    width: 100%;
+    padding: 25px 20px;
+    margin: 0;
+    font-size: 14px;
+    @include transition();
+
+    @include respond-to('large') {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 700;
+      margin: 3px 0;
+      padding: 12px 20px;
+      color: color(foreground, invert);
+    }
+
+    &.invert {
+      color: color(primary);
+      @include transition();
+    }
+
+    img {
+      margin-right: 6px;
+      display: none;
+
+      &.invert {
+        display: inline-block;
+      }
+
+      @include respond-to('large') {
+        display: inline-block;
+
+        &.show,
+        &.invert {
+          display: none;
+        }
+
+        &.invert {
+          &.show {
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    &--bg {
+      font-family: font(secondary);
+      background-color: color('primary');
+      color: color('foreground', 'invert');
+      font-weight: 700;
+      text-transform: uppercase;
+      border: solid 1px color('primary');
+      @include transition();
+
+      @include respond-to('large') {
+        background-color: color(background);
+        color: color(primary);
+        border: solid 1px color(background);
+        font-size: 13px;
+      }
+
+      &.invert {
+        background-color: color(primary);
+        border: solid 1px color(primary);
+        color: color(foreground, invert);
+        @include transition();
+      }
+    }
+
+    &--border {
+      font-family: font(secondary);
+      border-top: solid 1px color(primary);
+      border-bottom: solid 1px color(primary);
+      font-weight: 700;
+      text-transform: uppercase;
+      @include transition();
+
+      @include respond-to('large') {
+        border: solid 1px color(background);
+        font-size: 13px;
+
+        &.invert {
+          border: solid 1px color(primary);
+          @include transition();
+        }
+      }
+    }
+  }
+}

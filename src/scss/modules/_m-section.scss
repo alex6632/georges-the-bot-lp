@@ -1,0 +1,138 @@
+// _m-card.scss
+
+.section {
+  position: relative;
+  height: 100%;
+  padding: 50px 0;
+
+  @include respond-to('large') {
+    padding: 0;
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+
+    @include respond-to('large') {
+      padding: 0;
+    }
+  }
+
+  &--pres {
+    background: url('../img/bg.jpg') no-repeat;
+    background-size: cover;
+    padding-top: 80px;
+
+    @include respond-to('large') {
+      padding-top: 0;
+    }
+
+    .col-left,
+    .col-right {
+      width: 100%;
+
+      @include respond-to('large') {
+        display: inline-block;
+        vertical-align: bottom;
+      }
+    }
+    .col-left {
+      @include respond-to('large') {
+        width: 70%;
+        padding-left: 20px;
+      }
+    }
+    .col-right {
+      margin-top: 50px;
+
+      @include respond-to('large') {
+        margin-top: 0;
+        width: 29%;
+        padding-right: 20px;
+      }
+
+      img {
+        max-width: 60%;
+        margin: auto;
+        display: block;
+
+        @include respond-to('large') {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  &--about {
+    background-color: color('secondary');
+
+    .container {
+      @include respond-to('large') {
+        position: relative;
+        top: 10%;
+      }
+
+      img {
+        margin-top: 40px;
+
+        @include respond-to('large') {
+          margin: 0;
+        }
+      }
+    }
+
+    img {
+      @include respond-to('large') {
+        margin-top: 100px;
+      }
+    }
+  }
+
+  &--spec {
+    background-color: color('primary');
+
+    .container {
+      @include respond-to('large') {
+        position: relative;
+        top: 6%;
+      }
+    }
+
+    .iframe-container {
+      position: relative;
+
+      .iframe-ratio {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &--team {
+    padding: 50px 0 0 0;
+
+    @include respond-to('large') {
+      //padding: 110px 0 0 0;
+    }
+
+    .title {
+      display: inline-block;
+
+      h2 {
+        left: 50%;
+        transform: translateX(-50%);
+        color: color('primary');
+      }
+    }
+  }
+}

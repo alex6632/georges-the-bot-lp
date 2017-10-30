@@ -1,0 +1,32 @@
+// _l-header.scss
+
+.header {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  //background-color: rgba(color('background'),.5);
+  z-index: 9;
+
+  &.bg {
+    background-color: color('background');
+  }
+
+  @include respond-to('large') {
+    background-color: transparent;
+  }
+
+  &__top {
+    @include respond-to('large') {
+      float: left;
+    }
+  }
+
+  &__bottom {
+    @include respond-to('large') {
+      float: right;
+      margin-right: 20px;
+    }
+  }
+}
