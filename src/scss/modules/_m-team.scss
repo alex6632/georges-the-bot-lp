@@ -1,0 +1,47 @@
+//_m-team.scss
+
+.team-container {
+  width: 100%;
+
+  @include respond-to('medium') {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.team {
+  background-color: color('primary');
+  padding: 15px;
+  margin: 15px auto;
+  width: 250px;
+
+  @include respond-to('medium') {
+    margin: 15px;
+  }
+  @include respond-to('huge') {
+    min-height: 210px;
+    padding: 30px;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    max-height: 83px;
+    margin: 0 auto 30px auto;
+  }
+
+  &__name {
+    color: color('foreground', 'invert');
+    font-family: font('secondary');
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  &__role {
+    color: color('foreground', 'invert');
+    font-family: font('secondary');
+    font-weight: 100;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+}
